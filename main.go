@@ -13,7 +13,6 @@ func main() {
 		panic(e)
 	}
 
-	//fileLists := map[string][]os.FileInfo{}
 	for _, f := range files {
 		if f.IsDir() {
 			continue
