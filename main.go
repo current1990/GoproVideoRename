@@ -18,6 +18,11 @@ func main() {
 			continue
 		}
 		filename := strings.Split(f.Name(), ".")[0]
+		filetype := strings.ToLower(strings.Split(f.Name(), ".")[1])
+
+		if strings.Contains(filename, "_") || filetype == "exe" {
+			continue
+		}
 
 		vidPrefix := filename[:2]
 		vidPart := filename[2:4]
